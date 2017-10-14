@@ -1,0 +1,22 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+#    docker:
+#      - image: circleci/node:6.11.0
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Build the image
+          command: docker build -t nodejs-dev .
+
+#     - run:
+#            name: Run the container
+#            command: docker run --name nodejs-dev-app -t nodejs-dev

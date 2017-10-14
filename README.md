@@ -39,3 +39,17 @@ My general workflow for testing has looked something like:
 
 ### Continuous Integration
 [CircleCI](https://circleci.com/) is used to build the container on each PR.
+
+## Publish Procedure
+Below are the steps to publish a new release of the image, based on this [guide](https://docs.docker.com/docker-cloud/builds/push-images/)
+
+1. Export environment variable - `export DOCKER_ID_USER="username"
+1. Login - `docker login`
+ * Hit Enter
+ * Enter Password
+1. Build the image `docker build -t nodejs-dev .`
+1. Tag the image `docker tag nodejs-dev thegreenhouse/nodejs-dev`
+1. Push the image `docker push thegreenhouse/nodejs-dev`
+1. Check the image [exists](https://hub.docker.com/r/thegreenhouse/nodejs-dev/tags/) in Docker Hub
+1. Create a git tag `git tag -a x.y.z -m "tagging x.y.z release"
+1. Push the tag `git push origin master --tags`

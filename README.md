@@ -33,17 +33,23 @@ My general workflow for testing has looked something like:
 1. Make changes to _Dockerfile_
 1. Build the image `docker build -t nodejs-dev .`
 1. Run and connect to the container `docker run --name nodejs-dev-app -i -t nodejs-dev`
-1. Test things out
+1. Make a scratch space `mkdir workspace && cd workspace`
+1. Clone a repo `git clone https://github.com/thegreenhouseio/angular-webapp-seed.git`
+1. Move into it `cd workspace` and test things out, like `yarn install && yarn run build`
 1. Disconnect from the contaier `exit`
 1. Destroy the container `docker rm nodejs-dev-app`
 
 ### Continuous Integration
-[CircleCI](https://circleci.com/) is used to build the container on each PR.
+[CircleCI](https://circleci.com/) is used to build the container on each PR.  ([TODO](https://github.com/thegreenhouseio/docker-nodejs-dev/issues/18)) It run a scripts that's based on the above developer workflow
+1. Clones a repo in the container
+1. Installs dependencies
+1. Runs unit tests
+1. Runs the build
 
 ## Publish Procedure
 Below are the steps to publish a new release of the image, based on this [guide](https://docs.docker.com/docker-cloud/builds/push-images/)
 
-1. Export environment variable - `export DOCKER_ID_USER="username"
+1. Export environment variable - `export DOCKER_ID_USER="username"`
 1. Login - `docker login`
    * Hit Enter
    * Enter Password

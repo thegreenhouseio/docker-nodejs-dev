@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update
-RUN apt-get install -y curl
+RUN apt-get install -y curl vim git bzip2 ssh
 
 # install HeadlessChrome X11 packages
 # https://github.com/Quramy/puppeteer-example#with-docker-based-ci-services

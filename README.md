@@ -23,6 +23,14 @@ Common Docker commands, generally used in development
 
 - `docker build -t some-tag-name .` - build a Docker image from the project's _Dockerfile_ with a name (`-t`)
 - `docker run --name my-running-app -i -t some-tag-name` - start a Docker container from an image, giving it a name (`--name`).  The `-i` tag will connect you to the container automatically.
+- `docker rm my-running-app` - destroy a running container
 - `docker images` - list available images
 - `docker ps` - list available (running) containers
 - `exit` - quit a connection to a container
+
+### Workflow
+My general workflow for testing has looked something like:
+1. Make changes to _Dockerfile_
+1. `docker build` the image
+1. `docker run` the image
+1. Test things out

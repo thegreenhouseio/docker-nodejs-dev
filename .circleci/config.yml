@@ -18,6 +18,6 @@ jobs:
           name: Build the image
           command: docker build -t nodejs-dev .
 
-     - run:
+      - run:
           name: Run the container
           command: docker run --name nodejs-dev-app -t nodejs-dev

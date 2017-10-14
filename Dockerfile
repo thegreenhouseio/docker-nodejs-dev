@@ -12,3 +12,8 @@ RUN npm install -g yarn@^1.0.0
 
 # install latest yarn@1.0.0
 RUN yarn global add npm@^5.0.0
+
+# environment info
+RUN node -v
+RUN npm -v
+RUN yarn -v

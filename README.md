@@ -37,6 +37,8 @@ My general workflow for testing has looked something like:
 1. Disconnect from the contaier `exit`
 1. Destroy the container `docker rm nodejs-dev-app`
 
+There is a _package.json_ file available to test with as well in the _fixtures_ directory.
+
 ### Continuous Integration
 [CircleCI](https://circleci.com/) is used to build the container on each PR.
 

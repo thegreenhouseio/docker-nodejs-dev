@@ -45,8 +45,8 @@ Below are the steps to publish a new release of the image, based on this [guide]
 
 1. Export environment variable - `export DOCKER_ID_USER="username"
 1. Login - `docker login`
- * Hit Enter
- * Enter Password
+   * Hit Enter
+   * Enter Password
 1. Build the image `docker build -t nodejs-dev .`
 1. Tag the image `docker tag nodejs-dev thegreenhouse/nodejs-dev`
 1. Push the image `docker push thegreenhouse/nodejs-dev`

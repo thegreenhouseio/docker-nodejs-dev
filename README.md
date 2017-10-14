@@ -31,6 +31,11 @@ Common Docker commands, generally used in development
 ### Workflow
 My general workflow for testing has looked something like:
 1. Make changes to _Dockerfile_
-1. `docker build` the image
-1. `docker run` the image
+1. Build the image `docker build -t nodejs-dev .`
+1. Run and connect to the container `docker run --name nodejs-dev-app -i -t nodejs-dev`
 1. Test things out
+1. Disconnect from the contaier `exit`
+1. Destroy the container `docker rm nodejs-dev-app`
+
+### Continuous Integration
+[CircleCI](https://circleci.com/) is used to build the container on each PR.

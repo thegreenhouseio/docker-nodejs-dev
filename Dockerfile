@@ -12,7 +12,7 @@ RUN apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 lib
       ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
 
 # install NodeJS 6 LTS
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
 # install latest yarn@1.0.0

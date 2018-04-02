@@ -8,9 +8,9 @@ A [Docker][] image for [NodeJS][] development, primarily for the benefit of The 
 ## Features
 | Tool | Version | Notes |
 |------|---------|-------|
-| [NodeJS][] | 6.11.4  | This is the current LTS version |
-| [Yarn][] | 1.1.0  |       |
-| [npm][] | 5.5.21  |       |
+| [NodeJS][] | 8.x  | This is the current LTS version |
+| [Yarn][] | 1.x  |       |
+| [npm][] | 5.x  |       |
 | [Chrome Headless][] | N / A  |  Base image accounts for needed host packages needed to run Chrome Headless |
 
 [NodeJS]: https://nodejs.org/en/download/
@@ -18,8 +18,9 @@ A [Docker][] image for [NodeJS][] development, primarily for the benefit of The 
 [Yarn]: https://yarnpkg.com/en/
 [Chrome Headless]: https://developers.google.com/web/updates/2017/04/headless-chrome
 
-### Headless Chrome
+### Headless Chrome (Karma)
 Include this in your _karma.conf.js_.
+
 ```javascript
 browsers: ['CustomChromeHeadless'],
 customLaunchers: {

@@ -74,5 +74,5 @@ Below are the steps to publish a new release of the image, based on this [guide]
 1. Tag the image `docker tag nodejs-dev:latest thegreenhouse/nodejs-dev:x.y.z`
 1. Push the image `docker push thegreenhouse/nodejs-dev:x.y.z`
 1. Check the image [exists](https://hub.docker.com/r/thegreenhouse/nodejs-dev/tags/) in Docker Hub
-1. Create a git tag `git tag -a x.y.z -m "tagging x.y.z release"
+1. Create a git tag `git tag -a x.y.z -m "tagging x.y.z release"`
 1. Push the tag `git push origin master --tags`

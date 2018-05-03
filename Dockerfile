@@ -11,16 +11,16 @@ RUN apt-get install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 lib
       libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
       ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
 
-# install NodeJS 6 LTS
+# install NodeJS LTS
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
-# install latest yarn@1.0.0
+# install latest yarn@^1.0.0
 # use yarn to install npm \_(ツ)_/¯
 # https://stackoverflow.com/questions/44269086/how-to-upgrade-npm-to-npm5-on-the-latest-node-docker-image
 RUN npm install -g yarn@^1.0.0
 
-# upgrade to latest release of npm@5.0.0
+# upgrade to latest release of npm@^5.0.0
 RUN yarn global add npm@^5.0.0
 
 # environment info

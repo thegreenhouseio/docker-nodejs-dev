@@ -6,20 +6,26 @@ A [Docker][] image for [NodeJS][] development, primarily for the benefit of The 
 
 
 ## Features
+
+### Environment
 | Tool | Version | Notes |
 |------|---------|-------|
 | [NodeJS][] | 8.x  | This is the current LTS version |
 | [Yarn][] | 1.x  |       |
 | [npm][] | 5.x  |       |
-| [Chrome Headless][] | N / A  |  Base image accounts for needed host packages needed to run Chrome Headless |
+| [Chrome Headless][] | N / A  |  Host packages needed to run **Chrome** Headless |
+| [Chrome][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) like **puppeteer** |
+| [JRE][] | 8  |  Java Runtime Environment (needed by **Selenium**) |
 
 [NodeJS]: https://nodejs.org/en/download/
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/en/
 [Chrome Headless]: https://developers.google.com/web/updates/2017/04/headless-chrome
+[Chrome]: https://www.google.com/chrome/
+[JRE]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
-### Headless Chrome (Karma)
-Include this in your _karma.conf.js_.
+### Karma
+[Karma](https://karma-runner.github.io/) can use HeadlessChrome by including this in _karma.conf.js_.
 
 ```javascript
 browsers: ['CustomChromeHeadless'],
@@ -33,6 +39,32 @@ captureTimeout: 210000, // https://github.com/jasmine/jasmine/issues/1413#issuec
 browserDisconnectTolerance: 3,
 browserDisconnectTimeout: 210000,
 browserNoActivityTimeout: 210000,
+```
+
+### Web Component Tester (Selenium)
+[Web Component Tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester#custom-environments) can use Chrome by including  this in _wct.conf.json_.
+
+```javascript
+{
+  "plugins": {
+    "local": {
+      "disabled": true
+    },
+    "headless": {
+      "browsers": [
+        "chrome"
+      ],
+      "browsersOptions": {
+        "chrome": [
+          "window-size=1920,1080",
+          "headless",
+          "disable-gpu",
+          "no-sandbox"
+        ]
+      }
+    }
+  }
+}
 ```
 
 ## Development

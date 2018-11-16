@@ -6,7 +6,7 @@ https://hub.docker.com/r/thegreenhouse/nodejs-dev/tags/
 [NodeJS]: https://nodejs.org/
 
 # Usage
-In your own Dockerfile, use this project as your base image to get the full environment available to you.
+In your own _Dockerfile_, use this project as your base image to get the full environment available to you.
 ```shell
 FROM thegreenhouse/nodejs-dev:0.3.0
 ```
@@ -21,14 +21,14 @@ To see an example of this container being used for CI with all these features, s
 | [Yarn][] | 1.x  |       |
 | [npm][] | 6.x  |       |
 | [Chrome Headless][] | N / A  |  Host packages needed to run **Chrome** Headless |
-| [Chrome][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) like **puppeteer** |
+| [Chromium][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) |
 | [JRE][] | 8  |  Java Runtime Environment (needed by **Selenium**) |
 
 [NodeJS]: https://nodejs.org/en/download/
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/en/
 [Chrome Headless]: https://developers.google.com/web/updates/2017/04/headless-chrome
-[Chrome]: https://www.google.com/chrome/
+[Chromium]: https://www.chromium.org/
 [JRE]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
 ### Command Line tools
@@ -38,7 +38,7 @@ vim git bzip2 ssh build-essential
 ```
 
 ### Headless Chrome
-Headless Chrome (Pupetter) is available and for example can be used with [Karma](https://karma-runner.github.io/) by including this in _karma.conf.js_.
+Headless Chrome ([Puppetter]()) is available and for example can be used with [Karma](https://karma-runner.github.io/) by including this in _karma.conf.js_.
 
 ```javascript
 browsers: ['CustomChromeHeadless'],

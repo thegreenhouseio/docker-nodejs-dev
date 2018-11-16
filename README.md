@@ -21,14 +21,14 @@ To see an example of this container being used for CI with all these features, s
 | [Yarn][] | 1.x  |       |
 | [npm][] | 6.x  |       |
 | [Chrome Headless][] | N / A  |  Host packages needed to run **Chrome** Headless |
-| [Chromium][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) |
+| [Chrome][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) |
 | [JRE][] | 8  |  Java Runtime Environment (needed by **Selenium**) |
 
 [NodeJS]: https://nodejs.org/en/download/
 [npm]: https://www.npmjs.com/
 [Yarn]: https://yarnpkg.com/en/
 [Chrome Headless]: https://developers.google.com/web/updates/2017/04/headless-chrome
-[Chromium]: https://www.chromium.org/
+[Chrome]: https://www.google.com/chrome/
 [JRE]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
 ### Command Line tools
@@ -122,3 +122,4 @@ Below are the steps to publish a new release of the image, based on this [guide]
 1. Check the image [exists](https://hub.docker.com/r/thegreenhouse/nodejs-dev/tags/) in Docker Hub
 1. Create a git tag `git tag -a x.y.z -m "tagging x.y.z release"`
 1. Push the tag `git push origin master --tags`
+1. Create Release Notes

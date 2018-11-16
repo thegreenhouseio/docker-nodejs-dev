@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y curl vim git bzip2 ssh
+RUN apt-get update && apt-get install -y curl vim git bzip2 ssh build-essential
 
 # install HeadlessChrome X11 packages
 # https://github.com/Quramy/puppeteer-example#with-docker-based-ci-services
@@ -17,10 +17,10 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' |
 RUN apt-get update && apt-get install -y google-chrome-stable default-jre
 
 # install NodeJS 8 LTS
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 
 # install latest yarn@1.0.0 and upgrade to latest release of npm@5.0.0
 # use yarn to install npm \_(ツ)_/¯
 # https://stackoverflow.com/questions/44269086/how-to-upgrade-npm-to-npm5-on-the-latest-node-docker-image
-RUN npm install -g yarn@^1.0.0 && yarn global add npm@^5.0.0
+RUN npm install -g yarn@^1.10.0 && yarn global add npm@^6.0.0

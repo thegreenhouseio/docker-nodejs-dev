@@ -8,7 +8,7 @@ https://hub.docker.com/r/thegreenhouse/nodejs-dev/tags/
 # Usage
 In your own _Dockerfile_, use this project as your base image to get the full environment available to you.
 ```shell
-FROM thegreenhouse/nodejs-dev:0.3.0
+FROM thegreenhouse/nodejs-dev:<version>
 ```
 
 ## Features

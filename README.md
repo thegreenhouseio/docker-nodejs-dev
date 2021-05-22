@@ -19,7 +19,7 @@ To see an example of this container being used for CI with all these features, s
 |------|---------|-------|
 | [NodeJS][] | 14.x  | This is the current [minimum *active* version](https://nodejs.org/en/about/releases/) |
 | [Yarn][] | 1.x  |       |
-| [npm][] | 6.x  |       |
+| [npm][] | 7.x  |   This comes bundled with NodeJS    |
 | [Chrome Headless][] | N / A  |  Host packages needed to run **Chrome** Headless |
 | [Chrome][] | Stable  |  Host packages needed to run **Chrome** browser (in headless mode) |
 | [JRE][] | 8  |  Java Runtime Environment (needed by **Selenium**) |

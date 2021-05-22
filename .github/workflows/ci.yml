@@ -27,5 +27,3 @@ jobs:
       with:
         context: ./
         file: ./Dockerfile
-      run: |
-        docker build -t nodejs-dev .

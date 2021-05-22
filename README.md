@@ -17,7 +17,7 @@ To see an example of this container being used for CI with all these features, s
 ### Environment
 | Tool | Version | Notes |
 |------|---------|-------|
-| [NodeJS][] | 10.x  | This is the current LTS version |
+| [NodeJS][] | 14.x  | This is the current [minimum *active* version](https://nodejs.org/en/about/releases/) |
 | [Yarn][] | 1.x  |       |
 | [npm][] | 6.x  |       |
 | [Chrome Headless][] | N / A  |  Host packages needed to run **Chrome** Headless |

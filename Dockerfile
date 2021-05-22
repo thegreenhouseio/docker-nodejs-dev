@@ -17,7 +17,7 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' |
 RUN apt-get update && apt-get install -y google-chrome-stable default-jre
 
 # install NodeJS LTS
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
 
 # install latest yarn@1.0.0 and upgrade to latest release of npm@5.0.0
